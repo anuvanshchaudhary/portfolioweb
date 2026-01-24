@@ -1,0 +1,58 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SKILLS } from '@/utils/constants';
+import ScrambleText from '@/components/Effects/ScrambleText';
+
+export default function Skills() {
+    const skillCategories = [
+        { label: 'Languages', skills: SKILLS.LANGUAGES },
+        { label: 'Frontend', skills: SKILLS.FRONTEND },
+        { label: 'Backend', skills: SKILLS.BACKEND },
+        { label: 'Tools', skills: SKILLS.TOOLS },
+    ];
+
+    return (
+        <section className="py-section px-6 bg-surface">
+            <div className="max-w-5xl mx-auto">
+                {/* Section Label */}
+                <p className="font-mono text-label text-terracotta mb-12">
+                    SKILLS & TECHNOLOGIES
+                </p>
+
+                {/* Skills Grid */}
+                <div className="grid md:grid-cols-2 gap-12">
+                    {skillCategories.map((category, catIndex) => (
+                        <motion.div
+                            key={category.label}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: catIndex * 0.1 }}
+                        >
+                            <h3 className="text-h3 font-header font-bold text-parchment mb-6">
+                                <ScrambleText text={category.label} />
+                            </h3>
+                            <div className="flex flex-wrap gap-3">
+                                {category.skills.map((skill, skillIndex) => (
+                                    <motion.span
+                                        key={skill}
+                                        className="px-4 py-2 bg-void border border-parchment/20 text-parchment hover:border-terracotta hover:text-sandy transition-colors"
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: catIndex * 0.1 + skillIndex * 0.05 }}
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                    >
+                                        {skill}
+                                    </motion.span>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
