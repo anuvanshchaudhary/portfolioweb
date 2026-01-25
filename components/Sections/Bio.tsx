@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import SplitFlapText from '../Effects/SplitFlapText';
+import ContinuousScrollReveal from '../Effects/ContinuousScrollReveal';
 
 const bioParagraphs = [
     "Second-year Computer Science student at VIT Vellore, passionate about creating technology that makes a difference.",
@@ -25,17 +25,10 @@ export default function Bio() {
                         </p>
 
                         <div className="space-y-8">
-                            {bioParagraphs.map((paragraph, index) => (
-                                <div key={index} className="overflow-hidden min-h-[4rem]">
-                                    <SplitFlapText
-                                        text={paragraph}
-                                        className="text-body-lg font-header leading-relaxed text-foreground/90 block"
-                                        speed={15}
-                                        threshold={0.5} // Trigger when 50% visible
-                                        delay={0} // Rely on scroll position
-                                    />
-                                </div>
-                            ))}
+                            <ContinuousScrollReveal
+                                paragraphs={bioParagraphs}
+                                className=""
+                            />
                         </div>
                     </div>
 
@@ -52,7 +45,7 @@ export default function Bio() {
                             />
                         </div>
                         {/* Decorative elements behind image */}
-                        <div className="absolute -inset-4 border border-terracotta/20 rounded-2xl -z-10 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500" />
+                        <div className="absolute -inset-4 border border-terracotta/20 rounded-2xl -z-10 bg-void/50" />
                     </div>
 
                 </div>

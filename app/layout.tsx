@@ -15,12 +15,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Anuvansh Chaudhary | Full-Stack Developer & Innovator",
+    title: "Anuvansh Chaudhary.in",
     description: "Second-year CS student at VIT Vellore. Building AI tools, assistive hardware, and interactive web experiences. Open for internships.",
     keywords: ["Anuvansh Chaudhary", "Full-stack developer", "VIT Vellore", "AI PDF", "Assistive technology", "Web developer"],
     authors: [{ name: "Anuvansh Chaudhary" }],
     openGraph: {
-        title: "Anuvansh Chaudhary | Full-Stack Developer & Innovator",
+        title: "Anuvansh Chaudhary.in",
         description: "Second-year CS student at VIT Vellore. Building AI tools, assistive hardware, and interactive web experiences.",
         type: "website",
     },
