@@ -14,9 +14,9 @@ const bioParagraphs = [
 
 export default function Bio() {
   return (
-    <section className="py-section px-6 relative overflow-hidden">
+    <section className="py-section px-4 md:px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-12 md:gap-20 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 md:gap-20 items-center">
           {/* Text Column */}
           <div className="order-2 md:order-1">
             <p className="label-mono text-label text-terracotta mb-8 md:mb-12 text-lg md:text-xl">

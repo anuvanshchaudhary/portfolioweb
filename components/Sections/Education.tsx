@@ -34,47 +34,50 @@ export default function Education() {
     const container = containerRef.current;
     const timeline = timelineRef.current;
 
-    // Calculate how far we need to scroll horizontally
-    const scrollWidth = timeline.scrollWidth - container.offsetWidth;
+    const mm = gsap.matchMedia();
 
-    // Create horizontal scroll animation
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container,
-        start: "top top",
-        end: () => `+=${scrollWidth + container.offsetHeight}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
-      },
-    });
+    mm.add("(min-width: 768px)", () => {
+      // Desktop: Horizontal Scroll via Pinning
+      const scrollWidth = timeline.scrollWidth - container.offsetWidth;
 
-    tl.to(timeline, {
-      x: -scrollWidth,
-      ease: "none",
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: () => `+=${scrollWidth + container.offsetHeight}`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+
+      tl.to(timeline, {
+        x: -scrollWidth,
+        ease: "none",
+      });
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      mm.revert(); // Clean up matchMedia and ScrollTriggers
     };
   }, []);
 
   return (
     <section
       ref={containerRef}
-      className="relative h-screen overflow-hidden bg-surface"
+      className="relative md:h-screen bg-surface"
     >
-      <div className="absolute top-12 left-6">
+      <div className="absolute top-12 left-6 z-10">
         <p className="font-mono text-label text-terracotta">EDUCATION</p>
       </div>
 
       <div
         ref={timelineRef}
-        className="flex items-start pt-32 md:pt-48 h-full px-6 gap-24"
-        style={{ width: "fit-content" }}
+        className="flex items-start pt-32 md:pt-48 px-4 md:px-6 gap-6 md:gap-24 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none pb-12 md:pb-0 h-full md:w-fit"
+      // Remove fixed width style to allow natural flow
       >
         {educationData.map((item, index) => (
-          <div key={index} className="flex-shrink-0 w-96">
+          <div key={index} className="flex-shrink-0 w-[85vw] md:w-96 snap-center">
             <div className="relative">
               {/* Year */}
               <p className="text-hero font-header font-bold text-terracotta/30 mb-6">
@@ -96,11 +99,18 @@ export default function Education() {
             </div>
           </div>
         ))}
+        {/* Spacer for mobile end scroll */}
+        <div className="w-1 md:hidden flex-shrink-0" />
       </div>
 
       {/* Scroll Hint */}
-      <div className="absolute bottom-12 left-6">
+      <div className="absolute bottom-12 left-6 hidden md:block">
         <p className="font-mono text-label text-taupe">SCROLL TO PAN →</p>
+      </div>
+
+      {/* Mobile Swipe Hint */}
+      <div className="absolute bottom-6 left-6 md:hidden">
+        <p className="font-mono text-label text-taupe">SWIPE →</p>
       </div>
     </section>
   );

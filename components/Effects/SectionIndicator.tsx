@@ -60,7 +60,7 @@ export default function SectionIndicator() {
 
   return (
     <motion.div
-      className="fixed bottom-8 left-[47.75%] -translate-x-1/2 z-50"
+      className="fixed bottom-8 left-1/2 md:left-[47.75%] -translate-x-1/2 z-50 hidden md:block"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
@@ -68,8 +68,7 @@ export default function SectionIndicator() {
       <AnimatePresence mode="wait">
         <motion.button
           key={activeSection}
-          className="group relative flex items-center gap-3 px-6 py-3 bg-strict-black/80 backdrop-blur-md border border-parchment/20 rounded-full shadow-2xl hover:bg-strict-black/90 transition-all duration-300"
-          style={{ transform: "translateX(10px)" }}
+          className="group relative flex items-center gap-3 px-6 py-3 bg-strict-black/80 backdrop-blur-md border border-parchment/20 rounded-full shadow-2xl hover:bg-strict-black/90 transition-all duration-300 md:translate-x-[10px]"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
@@ -120,11 +119,10 @@ export default function SectionIndicator() {
         {sections.map((section) => (
           <motion.div
             key={section.id}
-            className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-              section.id === activeSection
-                ? "bg-terracotta w-4"
-                : "bg-parchment/30"
-            }`}
+            className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${section.id === activeSection
+              ? "bg-terracotta w-4"
+              : "bg-parchment/30"
+              }`}
             layoutId={`dot-${section.id}`}
           />
         ))}

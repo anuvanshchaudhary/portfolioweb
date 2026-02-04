@@ -14,7 +14,7 @@ export default function Skills() {
     ];
 
     return (
-        <section className="py-section px-6 bg-surface">
+        <section className="py-section px-4 md:px-6 bg-surface">
             <div className="max-w-5xl mx-auto">
                 {/* Section Label */}
                 <p className="font-mono text-label text-terracotta mb-12">
@@ -22,7 +22,7 @@ export default function Skills() {
                 </p>
 
                 {/* Skills Grid */}
-                <div className="grid md:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     {skillCategories.map((category, catIndex) => (
                         <motion.div
                             key={category.label}

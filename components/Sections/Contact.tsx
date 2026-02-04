@@ -7,13 +7,13 @@ import { CONTACT } from '@/utils/constants';
 
 export default function Contact() {
     return (
-        <footer className="relative py-section px-6 bg-surface">
+        <footer className="relative py-section px-4 md:px-6 bg-surface">
             <div className="max-w-5xl mx-auto">
                 {/* Rotating "Stay Curious" Badge */}
                 <div className="flex justify-center mb-16">
                     <div className="relative w-32 h-32">
-                        <svg 
-                            viewBox="0 0 200 200" 
+                        <svg
+                            viewBox="0 0 200 200"
                             className="rotating-badge"
                         >
                             <defs>
@@ -24,7 +24,7 @@ export default function Contact() {
                             </defs>
                             <text className="fill-terracotta font-mono text-[14px] tracking-widest uppercase">
                                 <textPath href="#circle">
-                                    Stay Curious • Stay Curious • 
+                                    Stay Curious • Stay Curious •
                                 </textPath>
                             </text>
                         </svg>
@@ -35,7 +35,7 @@ export default function Contact() {
                 </div>
 
                 {/* Contact Grid */}
-                <div className="grid md:grid-cols-2 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                     {/* Email */}
                     <motion.a
                         href={`mailto:${CONTACT.email}`}
@@ -47,7 +47,7 @@ export default function Contact() {
                             <Mail className="w-8 h-8 text-terracotta" />
                             <div>
                                 <p className="font-mono text-label text-taupe mb-1">EMAIL</p>
-                                <p className="text-body font-semibold text-parchment group-hover:text-sandy transition-colors">
+                                <p className="text-body font-semibold text-parchment group-hover:text-sandy transition-colors break-all">
                                     {CONTACT.email}
                                 </p>
                             </div>

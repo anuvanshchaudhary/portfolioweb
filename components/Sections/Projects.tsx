@@ -14,7 +14,7 @@ export default function Projects() {
     };
 
     return (
-        <section className="py-section px-6">
+        <section className="py-section px-4 md:px-6">
             <div className="max-w-5xl mx-auto">
                 {/* Section Label */}
                 <p className="font-mono text-label text-terracotta mb-12">
@@ -81,7 +81,7 @@ export default function Projects() {
                                         transition={{ duration: 0.4, ease: 'easeInOut' }}
                                         className="overflow-hidden"
                                     >
-                                        <div className="pb-8 pl-20 space-y-6">
+                                        <div className="pb-8 pl-0 md:pl-20 space-y-6">
                                             {/* Description */}
                                             <p className="text-body-lg text-taupe leading-relaxed">
                                                 {project.description}
