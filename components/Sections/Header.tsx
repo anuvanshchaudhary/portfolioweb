@@ -23,7 +23,7 @@ export default function Header() {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <p className="font-mono text-label text-terracotta">AVAIL. 2026</p>
+          <p className="font-mono text-label-sm md:text-label text-terracotta">AVAIL. 2026</p>
         </motion.div>
       </div>
     </motion.header>

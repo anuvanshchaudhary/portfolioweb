@@ -15,22 +15,22 @@ const bioParagraphs = [
 export default function Bio() {
   return (
     <section className="py-section px-4 md:px-6 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-12 md:gap-20 items-center">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-12 md:gap-24 items-center">
           {/* Text Column */}
           <div className="order-2 md:order-1">
-            <p className="label-mono text-label text-terracotta mb-8 md:mb-12 text-lg md:text-xl">
+            <p className="label-mono text-label-sm md:text-label text-terracotta mb-8 md:mb-12 text-lg md:text-xl">
               ABOUT
             </p>
 
             <div className="space-y-8">
-              <ContinuousScrollReveal paragraphs={bioParagraphs} className="" />
+              <ContinuousScrollReveal paragraphs={bioParagraphs} className="text-body-sm md:text-body-lg" />
             </div>
           </div>
 
           {/* Image Column */}
           <div className="order-1 md:order-2 relative group">
-            <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:max-w-none rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-out border border-white/10 shadow-2xl">
+            <div className="relative aspect-[4/5] w-full max-w-[80%] md:max-w-none mx-auto rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-out border border-white/10 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-60" />
               <Image
                 src="/images/profile.png"

@@ -25,17 +25,25 @@ const config: Config = {
                 mono: ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'monospace'],
             },
             fontSize: {
-                'hero': ['clamp(60px, 9vw, 120px)', { lineHeight: '1.0', letterSpacing: '-0.02em' }],
-                'h1': ['clamp(45px, 7vw, 80px)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-                'h2': ['clamp(35px, 5vw, 60px)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-                'h3': ['clamp(30px, 4vw, 48px)', { lineHeight: '1.3' }],
-                'body-lg': ['clamp(22px, 2.5vw, 28px)', { lineHeight: '1.8' }],
-                'body': ['20px', { lineHeight: '1.6' }],
-                'label': ['15px', { lineHeight: '1.2', letterSpacing: '0.3em' }],
+                'hero': ['clamp(70px, 13vw, 165px)', { lineHeight: '0.96', letterSpacing: '-0.02em' }], // Increased slightly
+                'hero-sm': ['32px', { lineHeight: '1.0', letterSpacing: '-0.02em' }],
+                'h1': ['clamp(55px, 10vw, 110px)', { lineHeight: '1.1', letterSpacing: '-0.02em' }], // Increased slightly
+                'h1-sm': ['28px', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+                'h2': ['clamp(45px, 8vw, 85px)', { lineHeight: '1.2', letterSpacing: '-0.01em' }], // Increased slightly
+                'h2-sm': ['24px', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+                'h3': ['clamp(35px, 6vw, 65px)', { lineHeight: '1.3' }], // Increased slightly
+                'h3-sm': ['20px', { lineHeight: '1.3' }],
+                'body-lg': ['clamp(24px, 4vw, 34px)', { lineHeight: '1.8' }], // Increased slightly
+                'body-lg-sm': ['16px', { lineHeight: '1.8' }],
+                'body': ['24px', { lineHeight: '1.6' }], // Increased slightly
+                'body-sm': ['14px', { lineHeight: '1.6' }],
+                'label': ['17px', { lineHeight: '1.2', letterSpacing: '0.3em' }], // Increased slightly
+                'label-sm': ['12px', { lineHeight: '1.2', letterSpacing: '0.3em' }],
             },
             spacing: {
-                'section': 'clamp(80px, 12vw, 160px)',
-                'paragraph': 'clamp(32px, 5vw, 64px)',
+                'section': 'clamp(100px, 16vw, 220px)',
+                'section-sm': '40px',
+                'paragraph': 'clamp(36px, 6vw, 75px)',
             },
             borderRadius: {
                 'none': '0',

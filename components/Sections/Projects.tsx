@@ -15,9 +15,9 @@ export default function Projects() {
 
     return (
         <section className="py-section px-4 md:px-6">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 {/* Section Label */}
-                <p className="font-mono text-label text-terracotta mb-12">
+                <p className="font-mono text-label-sm md:text-label text-terracotta mb-12">
                     PROJECTS
                 </p>
 
@@ -35,12 +35,12 @@ export default function Projects() {
                             {/* Project Header (Always Visible) */}
                             <button
                                 onClick={() => toggleProject(project.id)}
-                                className="w-full py-8 flex items-center justify-between group"
+                                className="w-full py-6 md:py-8 flex items-center justify-between group"
                             >
                                 <div className="flex items-center gap-6">
                                     {/* Project Icon */}
                                     <div
-                                        className="text-4xl flex-shrink-0"
+                                        className="text-3xl md:text-6xl flex-shrink-0"
                                         style={{ filter: 'grayscale(1)' }}
                                     >
                                         {project.icon}
@@ -48,14 +48,14 @@ export default function Projects() {
 
                                     {/* Project Title with Scramble on Hover */}
                                     <div className="text-left">
-                                        <h3 className="text-h3 font-header font-bold text-parchment group-hover:text-sandy transition-colors">
+                                        <h3 className="text-h3-sm md:text-h3 font-header font-bold text-parchment group-hover:text-sandy transition-colors">
                                             <ScrambleText
                                                 text={project.title}
                                                 trigger="viewport"
                                             />
                                         </h3>
                                         {'patentPending' in project && project.patentPending && (
-                                            <span className="inline-block mt-2 px-3 py-1 bg-terracotta/20 border border-terracotta text-terracotta font-mono text-label">
+                                            <span className="inline-block mt-2 px-3 py-1 bg-terracotta/20 border border-terracotta text-terracotta font-mono text-label-sm md:text-label">
                                                 PATENT PENDING
                                             </span>
                                         )}
@@ -83,7 +83,7 @@ export default function Projects() {
                                     >
                                         <div className="pb-8 pl-0 md:pl-20 space-y-6">
                                             {/* Description */}
-                                            <p className="text-body-lg text-taupe leading-relaxed">
+                                            <p className="text-body-lg-sm md:text-body-lg text-taupe leading-relaxed">
                                                 {project.description}
                                             </p>
 
@@ -106,9 +106,9 @@ export default function Projects() {
                                                         href={project.github}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 px-8 py-4 bg-terracotta text-parchment hover:bg-sandy transition-colors font-semibold text-lg"
+                                                        className="flex items-center gap-2 px-5 py-2.5 md:px-8 md:py-4 bg-terracotta text-parchment hover:bg-sandy transition-colors font-semibold text-sm md:text-lg"
                                                     >
-                                                        <Github size={18} />
+                                                        <Github className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                                                         <span>View Code</span>
                                                     </a>
                                                 )}
@@ -118,9 +118,9 @@ export default function Projects() {
                                                         href={project.demo}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 px-8 py-4 border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-parchment transition-colors font-semibold text-lg"
+                                                        className="flex items-center gap-2 px-5 py-2.5 md:px-8 md:py-4 border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-parchment transition-colors font-semibold text-sm md:text-lg"
                                                     >
-                                                        <ExternalLink size={18} />
+                                                        <ExternalLink className="w-4 h-4 md:w-[18px] md:h-[18px]" />
                                                         <span>Live Demo</span>
                                                     </a>
                                                 )}

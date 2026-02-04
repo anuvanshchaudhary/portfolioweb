@@ -24,7 +24,7 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center">
+            <div className="relative z-10 w-full max-w-[95%] mx-auto px-4 md:px-6 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export default function Hero() {
                 >
                     {/* Small Label */}
                     <motion.p
-                        className="label-mono text-label text-taupe mb-8"
+                        className="label-mono text-label-sm md:text-2xl text-taupe mb-6 md:mb-8"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
@@ -41,17 +41,26 @@ export default function Hero() {
                     </motion.p>
 
                     {/* Main Headline with Scramble Effect */}
-                    <h1 className="text-hero font-header font-bold mb-6">
-                        <ScrambleText
-                            text="Anuvansh Chaudhary"
-                            trigger="mount"
-                            delay={800}
-                        />
+                    <h1 className="text-hero-sm md:text-hero font-header font-bold mb-6">
+                        <span className="block md:inline">
+                            <ScrambleText
+                                text="Anuvansh"
+                                trigger="mount"
+                                delay={800}
+                            />
+                        </span>
+                        <span className="block md:inline md:ml-4">
+                            <ScrambleText
+                                text="Chaudhary"
+                                trigger="mount"
+                                delay={900} // Slight delay stagger for effect
+                            />
+                        </span>
                     </h1>
 
                     {/* Subtitle */}
                     <motion.p
-                        className="text-h3 font-header italic text-sandy mb-12"
+                        className="text-h3-sm md:text-h3 font-header italic text-sandy mb-8 md:mb-12"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.2 }}
@@ -61,7 +70,7 @@ export default function Hero() {
 
                     {/* Description */}
                     <motion.p
-                        className="text-body-lg text-parchment max-w-2xl mx-auto leading-relaxed"
+                        className="text-body-lg-sm md:text-body-lg text-parchment max-w-5xl mx-auto leading-relaxed"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.5 }}

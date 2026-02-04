@@ -68,29 +68,29 @@ export default function Education() {
       className="relative md:h-screen bg-surface"
     >
       <div className="absolute top-12 left-6 z-10">
-        <p className="font-mono text-label text-terracotta">EDUCATION</p>
+        <p className="font-mono text-label-sm md:text-label text-terracotta">EDUCATION</p>
       </div>
 
       <div
         ref={timelineRef}
-        className="flex items-start pt-32 md:pt-48 px-4 md:px-6 gap-6 md:gap-24 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none pb-12 md:pb-0 h-full md:w-fit"
+        className="flex items-start pt-32 md:pt-48 px-4 md:px-6 gap-6 md:gap-48 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none pb-12 md:pb-0 h-full md:w-fit"
       // Remove fixed width style to allow natural flow
       >
         {educationData.map((item, index) => (
-          <div key={index} className="flex-shrink-0 w-[85vw] md:w-96 snap-center">
+          <div key={index} className="flex-shrink-0 w-[85vw] md:w-[550px] snap-center">
             <div className="relative">
               {/* Year */}
-              <p className="text-hero font-header font-bold text-terracotta/30 mb-6">
+              <p className="text-hero-sm md:text-hero font-header font-bold text-terracotta/30 mb-6">
                 {item.year}
               </p>
 
               {/* Primary (Marks/CGPA - Major) */}
-              <h3 className="text-h3 font-header font-bold text-parchment mb-3">
+              <h3 className="text-h3-sm md:text-h3 font-header font-bold text-parchment mb-3">
                 {item.primary}
               </h3>
 
               {/* Secondary (Degree - Institution) */}
-              <p className="text-body-lg text-taupe leading-relaxed">
+              <p className="text-body-lg-sm md:text-body-lg text-taupe leading-relaxed">
                 {item.secondary}
               </p>
 

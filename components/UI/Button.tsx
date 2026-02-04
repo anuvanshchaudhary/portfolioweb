@@ -22,7 +22,7 @@ export default function Button({
     disabled,
     ...props
 }: ButtonProps) {
-    const baseStyles = "relative flex items-center justify-center gap-2 px-6 py-3 font-bold uppercase tracking-wider text-label transition-colors disabled:opacity-50 disabled:cursor-not-allowed";
+    const baseStyles = "relative flex items-center justify-center gap-2 px-5 py-2.5 md:px-6 md:py-3 font-bold uppercase tracking-wider text-xs md:text-label transition-colors disabled:opacity-50 disabled:cursor-not-allowed";
 
     const variants = {
         primary: "bg-strict-black text-window-white border-2 border-strict-black hover:bg-gpt-blue hover:border-gpt-blue hover:text-window-white",

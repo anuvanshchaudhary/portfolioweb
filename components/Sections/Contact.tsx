@@ -8,7 +8,7 @@ import { CONTACT } from '@/utils/constants';
 export default function Contact() {
     return (
         <footer className="relative py-section px-4 md:px-6 bg-surface">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto">
                 {/* Rotating "Stay Curious" Badge */}
                 <div className="flex justify-center mb-16">
                     <div className="relative w-32 h-32">
@@ -43,11 +43,11 @@ export default function Contact() {
                         whileHover={{ x: 10 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                     >
-                        <div className="flex items-center gap-4 p-6 border-2 border-parchment/10 hover:border-terracotta transition-colors">
-                            <Mail className="w-8 h-8 text-terracotta" />
+                        <div className="flex items-center gap-4 p-5 md:p-6 border-2 border-parchment/10 hover:border-terracotta transition-colors">
+                            <Mail className="w-6 h-6 text-terracotta" />
                             <div>
-                                <p className="font-mono text-label text-taupe mb-1">EMAIL</p>
-                                <p className="text-body font-semibold text-parchment group-hover:text-sandy transition-colors break-all">
+                                <p className="font-mono text-label-sm md:text-label text-taupe mb-1">EMAIL</p>
+                                <p className="text-body-sm md:text-body font-semibold text-parchment group-hover:text-sandy transition-colors break-all">
                                     {CONTACT.email}
                                 </p>
                             </div>
@@ -62,11 +62,11 @@ export default function Contact() {
                         whileHover={{ x: 10 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                     >
-                        <div className="flex items-center gap-4 p-6 border-2 border-parchment/10 hover:border-terracotta transition-colors">
-                            <FileDown className="w-8 h-8 text-terracotta" />
+                        <div className="flex items-center gap-4 p-5 md:p-6 border-2 border-parchment/10 hover:border-terracotta transition-colors">
+                            <FileDown className="w-6 h-6 text-terracotta" />
                             <div>
-                                <p className="font-mono text-label text-taupe mb-1">RESUME</p>
-                                <p className="text-body font-semibold text-parchment group-hover:text-sandy transition-colors">
+                                <p className="font-mono text-label-sm md:text-label text-taupe mb-1">RESUME</p>
+                                <p className="text-body-sm md:text-body font-semibold text-parchment group-hover:text-sandy transition-colors">
                                     Download PDF
                                 </p>
                             </div>
@@ -101,10 +101,10 @@ export default function Contact() {
 
                 {/* Footer Text */}
                 <div className="text-center space-y-4">
-                    <p className="text-body text-taupe">
+                    <p className="text-body-sm md:text-body text-taupe">
                         Second-year CS student at VIT Vellore
                     </p>
-                    <p className="font-mono text-label text-taupe">
+                    <p className="font-mono text-label-sm md:text-label text-taupe">
                         AVAILABLE FOR INTERNSHIPS 2026
                     </p>
                 </div>
