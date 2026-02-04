@@ -77,7 +77,7 @@ export default function Education() {
       // Remove fixed width style to allow natural flow
       >
         {educationData.map((item, index) => (
-          <div key={index} className="flex-shrink-0 w-[85vw] md:w-[550px] snap-center">
+          <div key={index} className="flex-shrink-0 w-[65vw] md:w-[550px] snap-center">
             <div className="relative">
               {/* Year */}
               <p className="text-hero-sm md:text-hero font-header font-bold text-terracotta/30 mb-6">

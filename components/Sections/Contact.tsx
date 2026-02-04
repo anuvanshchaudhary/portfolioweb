@@ -7,10 +7,10 @@ import { CONTACT } from '@/utils/constants';
 
 export default function Contact() {
     return (
-        <footer className="relative py-section px-4 md:px-6 bg-surface">
+        <footer className="relative py-section-sm md:py-section px-4 md:px-6 bg-surface">
             <div className="max-w-6xl mx-auto">
                 {/* Rotating "Stay Curious" Badge */}
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-8 md:mb-16">
                     <div className="relative w-32 h-32">
                         <svg
                             viewBox="0 0 200 200"

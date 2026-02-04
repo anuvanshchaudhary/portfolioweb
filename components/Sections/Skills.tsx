@@ -22,7 +22,7 @@ export default function Skills() {
                 </p>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
                     {skillCategories.map((category, catIndex) => (
                         <motion.div
                             key={category.label}
@@ -31,10 +31,10 @@ export default function Skills() {
                             viewport={{ once: true }}
                             transition={{ delay: catIndex * 0.1 }}
                         >
-                            <h3 className="text-h3-sm md:text-h3 font-header font-bold text-parchment mb-6">
+                            <h3 className="text-3xl md:text-h3 font-header font-bold text-parchment mb-3 md:mb-6">
                                 <ScrambleText text={category.label} />
                             </h3>
-                            <div className="flex flex-wrap gap-6">
+                            <div className="flex flex-wrap gap-3 md:gap-6">
                                 {category.skills.map((skill, skillIndex) => (
                                     <motion.span
                                         key={skill}
