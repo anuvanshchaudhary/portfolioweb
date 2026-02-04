@@ -38,7 +38,7 @@ export default function Skills() {
                                 {category.skills.map((skill, skillIndex) => (
                                     <motion.span
                                         key={skill}
-                                        className="px-4 py-2 bg-void border border-parchment/20 text-parchment hover:border-terracotta hover:text-sandy transition-colors"
+                                        className="px-4 py-2 bg-void border border-parchment/20 text-parchment hover:border-terracotta hover:text-sandy transition-colors text-body-lg"
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true }}

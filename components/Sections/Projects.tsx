@@ -92,7 +92,7 @@ export default function Projects() {
                                                 {project.techStack.map((tech) => (
                                                     <span
                                                         key={tech}
-                                                        className="px-4 py-2 bg-surface border border-parchment/10 text-parchment font-mono text-xs"
+                                                        className="px-4 py-2 bg-surface border border-parchment/10 text-parchment font-mono text-sm"
                                                     >
                                                         {tech}
                                                     </span>
@@ -106,7 +106,7 @@ export default function Projects() {
                                                         href={project.github}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 px-6 py-3 bg-terracotta text-parchment hover:bg-sandy transition-colors font-semibold"
+                                                        className="flex items-center gap-2 px-8 py-4 bg-terracotta text-parchment hover:bg-sandy transition-colors font-semibold text-lg"
                                                     >
                                                         <Github size={18} />
                                                         <span>View Code</span>
@@ -118,7 +118,7 @@ export default function Projects() {
                                                         href={project.demo}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 px-6 py-3 border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-parchment transition-colors font-semibold"
+                                                        className="flex items-center gap-2 px-8 py-4 border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-parchment transition-colors font-semibold text-lg"
                                                     >
                                                         <ExternalLink size={18} />
                                                         <span>Live Demo</span>

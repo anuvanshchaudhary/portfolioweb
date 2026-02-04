@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const timeline = [
-    { year: '2023', title: 'Started at VIT Vellore', description: 'Began B.Tech in Computer Science' },
+    { year: '2024', title: 'CSS Lab Project', description: 'Advanced CSS animations and 3D effects' },
     { year: '2024', title: 'Morse Assist', description: 'Developed patent-pending assistive device' },
     { year: '2024', title: 'Easy PDF', description: 'Built AI-powered PDF summarization tool' },
     { year: '2025', title: 'Full-Stack Projects', description: 'Expanded web development portfolio' },
@@ -57,8 +57,8 @@ export default function Experience() {
                 </p>
             </div>
 
-            <div 
-                ref={timelineRef} 
+            <div
+                ref={timelineRef}
                 className="flex items-center h-full px-6 gap-24"
                 style={{ width: 'fit-content' }}
             >
@@ -90,7 +90,7 @@ export default function Experience() {
             {/* Scroll Hint */}
             <div className="absolute bottom-12 left-6">
                 <p className="font-mono text-label text-taupe">
-                  SCROLL TO PAN →
+                    SCROLL TO PAN →
                 </p>
             </div>
         </section>

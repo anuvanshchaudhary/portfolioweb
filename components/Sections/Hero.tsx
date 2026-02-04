@@ -9,15 +9,15 @@ export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image constrained behind text */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[60vh] -z-10 opacity-50 select-none">
-                <div className="relative w-full h-full rounded-full overflow-hidden blur-sm scale-90">
+            <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-screen-2xl h-[65vh] -z-10 opacity-50 select-none">
+                <div className="relative w-full h-full rounded-full overflow-hidden blur-sm scale-100">
                     <Image
                         src="/images/hero-bg.jpg"
                         alt="Anuvansh Chaudhary"
                         fill
                         className="object-cover"
                         priority
-                        sizes="(max-width: 768px) 100vw, 1200px"
+                        sizes="(max-width: 768px) 100vw, 1400px" // Updated sizes for performance
                     />
                     <div className="absolute inset-0 bg-void/40" />
                 </div>
@@ -32,12 +32,12 @@ export default function Hero() {
                 >
                     {/* Small Label */}
                     <motion.p
-                        className="font-mono text-label text-taupe mb-8"
+                        className="label-mono text-label text-taupe mb-8"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
                     >
-                        PORTFOLIO 2026
+                        MY PORTFOLIO
                     </motion.p>
 
                     {/* Main Headline with Scramble Effect */}

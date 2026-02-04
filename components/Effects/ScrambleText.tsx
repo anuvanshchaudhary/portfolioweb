@@ -11,7 +11,7 @@ interface ScrambleTextProps {
     scrambleSpeed?: number;
 }
 
-const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
 export default function ScrambleText({
     text,
@@ -112,12 +112,24 @@ export default function ScrambleText({
 
     return (
         <motion.span
-            className={`${className} ${isScrambling ? 'scrambling' : ''} ${!isMounted ? 'opacity-0' : ''}`}
-            onViewportEnter={() => handleViewport(true)}
+            className={`${className} inline-block whitespace-pre-wrap`}
             onMouseEnter={handleMouseEnter}
+            onViewportEnter={() => handleViewport(true)}
             viewport={{ once: true, amount: 0.5 }}
         >
-            {displayText}
+            <span className={`${!isMounted ? 'opacity-0' : ''}`}>
+                {text.split('').map((char, index) => (
+                    <span key={index} className="relative inline-block">
+                        {/* Phantom stable char to set width */}
+                        <span className="opacity-0 select-none pointer-events-none">{char}</span>
+
+                        {/* Absolute scrambling char overlaid */}
+                        <span className={`absolute left-0 top-0 ${isScrambling ? 'scrambling' : ''}`}>
+                            {displayText[index] || char}
+                        </span>
+                    </span>
+                ))}
+            </span>
         </motion.span>
     );
 }
