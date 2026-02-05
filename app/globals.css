@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: dark;
   /* Warm Editorial Color Palette */
   --color-void: #1a0f0e;
   --color-surface: #2e1f1c;

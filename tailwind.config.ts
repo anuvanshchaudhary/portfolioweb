@@ -9,15 +9,14 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                // Warm Editorial Palette
-                'void': '#1a0f0e',
-                'surface': '#2e1f1c',
-                'parchment': '#F4F0EC',
-                'taupe': '#9F8170',
-                'terracotta': '#A45A52',
-                'palm': '#8A9A5B',
-                'sandy': '#E0AB76',
-                'clay': '#79443B',
+                'void': 'var(--color-void)',
+                'surface': 'var(--color-surface)',
+                'parchment': 'var(--color-parchment)',
+                'taupe': 'var(--color-taupe)',
+                'terracotta': 'var(--color-terracotta)',
+                'palm': 'var(--color-palm)',
+                'sandy': 'var(--color-sandy)',
+                'clay': 'var(--color-clay)',
             },
             fontFamily: {
                 header: ['Playfair Display', 'serif'],
