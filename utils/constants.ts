@@ -127,7 +127,7 @@ export const SKILLS = {
 // Contact Information
 export const CONTACT = {
     email: 'anuvanshchaudhary8755@gmail.com',
-    linkedin: 'https://linkedin.com/in/anuvansh-chaudhary',
+    linkedin: 'https://www.linkedin.com/in/anuvansh-chaudhary9/',
     github: 'https://github.com/anuvanshchaudhary',
     resume: '/resume.pdf',
 } as const;

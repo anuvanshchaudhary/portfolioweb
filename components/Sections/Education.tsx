@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const educationData = [
   {
-    year: "2021",
-    primary: "91% • Secondary",
-    secondary: "Class X • St. Joseph's Convent School",
+    year: "2028",
+    primary: "CGPA: 8.75 • Computer Science",
+    secondary: "Bachelor of Technology • Vellore Institute of Technology",
   },
   {
     year: "2023",
@@ -18,11 +18,12 @@ const educationData = [
     secondary: "Class XII • DAV Public School",
   },
   {
-    year: "2028",
-    primary: "CGPA: 8.75 • Computer Science",
-    secondary: "Bachelor of Technology • Vellore Institute of Technology",
+    year: "2021",
+    primary: "91% • Secondary",
+    secondary: "Class X • St. Joseph's Convent School",
   },
 ];
+
 
 export default function Education() {
   const containerRef = useRef<HTMLDivElement>(null);

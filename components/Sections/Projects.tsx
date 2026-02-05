@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, ChevronDown } from 'lucide-react';
-import ScrambleText from '../Effects/ScrambleText';
+import ScrollScrambleText from '../Effects/ScrollScrambleText';
 import { PROJECTS } from '@/utils/constants';
 
 export default function Projects() {
@@ -49,9 +49,8 @@ export default function Projects() {
                                     {/* Project Title with Scramble on Hover */}
                                     <div className="text-left">
                                         <h3 className="text-h3-sm md:text-h3 font-header font-bold text-parchment group-hover:text-sandy transition-colors">
-                                            <ScrambleText
+                                            <ScrollScrambleText
                                                 text={project.title}
-                                                trigger="viewport"
                                             />
                                         </h3>
                                         {'patentPending' in project && project.patentPending && (

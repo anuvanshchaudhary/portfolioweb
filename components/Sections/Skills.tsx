@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SKILLS } from '@/utils/constants';
-import ScrambleText from '@/components/Effects/ScrambleText';
+import ScrollScrambleText from '@/components/Effects/ScrollScrambleText';
 
 export default function Skills() {
     const skillCategories = [
@@ -32,7 +32,7 @@ export default function Skills() {
                             transition={{ delay: catIndex * 0.1 }}
                         >
                             <h3 className="text-3xl md:text-h3 font-header font-bold text-parchment mb-3 md:mb-6">
-                                <ScrambleText text={category.label} />
+                                <ScrollScrambleText text={category.label} />
                             </h3>
                             <div className="flex flex-wrap gap-3 md:gap-6">
                                 {category.skills.map((skill, skillIndex) => (
