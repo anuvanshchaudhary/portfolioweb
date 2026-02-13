@@ -76,7 +76,7 @@ export default function Education() {
       className="relative md:h-screen bg-surface"
     >
       <div className="absolute top-12 left-6 z-10">
-        <p className="font-mono text-label-sm md:text-label text-terracotta">EDUCATION</p>
+        <p className="font-mono text-[0.65rem] md:text-label text-terracotta">EDUCATION</p>
       </div>
 
       <div
@@ -89,17 +89,17 @@ export default function Education() {
             {/* Added min-h-[300px] to ensure the line is tall enough even for short content */}
             <div className={`relative pl-8 h-full min-h-[300px] flex flex-col justify-center ${index !== 0 ? 'border-l border-sandy/60' : 'border-l border-transparent'}`}>
               {/* Year */}
-              <p className="text-hero-sm md:text-hero font-header font-bold text-terracotta/30 mb-6">
+              <p className="text-xl md:text-hero font-header font-bold text-terracotta/30 mb-6">
                 {item.year}
               </p>
 
               {/* Primary (Marks/CGPA - Major) */}
-              <h3 className="text-h3-sm md:text-h3 font-header font-bold text-parchment mb-3">
+              <h3 className="text-lg md:text-h3 font-header font-bold text-parchment mb-3">
                 {item.primary}
               </h3>
 
               {/* Secondary (Degree - Institution) */}
-              <p className="text-body-lg-sm md:text-body-lg text-taupe leading-relaxed">
+              <p className="text-sm md:text-body-lg text-taupe leading-relaxed">
                 {item.secondary}
               </p>
             </div>

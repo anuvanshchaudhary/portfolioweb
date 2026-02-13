@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Header from '@/components/Sections/Header';
 import Hero from '@/components/Sections/Hero';
 import Bio from '@/components/Sections/Bio';
 
@@ -12,6 +11,7 @@ import Contact from '@/components/Sections/Contact';
 import ProgressTracker from '@/components/Effects/ProgressTracker';
 import dynamic from 'next/dynamic';
 
+const Header = dynamic(() => import('@/components/Sections/Header'), { ssr: false });
 const SectionIndicator = dynamic(() => import('@/components/Effects/SectionIndicator'), { ssr: false });
 
 export default function Home() {

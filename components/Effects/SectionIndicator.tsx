@@ -62,7 +62,7 @@ export default function SectionIndicator() {
 
   return (
     <motion.div
-      className="fixed bottom-8 left-1/2 md:left-[47.32%] -translate-x-1/2 z-50 hidden md:block"
+      className="fixed bottom-8 left-1/2 md:left-[47%] -translate-x-1/2 z-50 hidden md:block"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}

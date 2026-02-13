@@ -19,12 +19,15 @@ export default function Bio() {
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-12 md:gap-24 items-center">
           {/* Text Column */}
           <div className="order-2 md:order-1">
-            <p className="label-mono text-label-sm md:text-label text-terracotta mb-8 md:mb-12 text-lg md:text-xl">
+            <p className="label-mono text-[0.65rem] md:text-label text-terracotta mb-6 md:mb-12">
               ABOUT
             </p>
 
             <div className="space-y-8">
-              <ContinuousScrollReveal paragraphs={bioParagraphs} className="text-lg md:text-2xl leading-relaxed" />
+              <ContinuousScrollReveal
+                paragraphs={bioParagraphs}
+                className="text-base md:text-2xl leading-relaxed"
+              />
             </div>
           </div>
 

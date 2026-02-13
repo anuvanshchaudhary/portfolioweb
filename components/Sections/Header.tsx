@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Header() {
+  // Force rebuild
   return (
     <motion.header
       className="fixed top-0 left-0 right-0 z-40 px-4 md:px-6 py-6"
@@ -12,10 +13,7 @@ export default function Header() {
       transition={{ delay: 0.5 }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo with Mix Blend Difference */}
-        <div className="mix-blend-diff">
-          <h2 className="text-xl font-header font-bold tracking-tight">ME</h2>
-        </div>
+
 
         {/* Availability Badge */}
         <motion.div
