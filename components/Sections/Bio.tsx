@@ -23,7 +23,7 @@ export default function Bio() {
               ABOUT
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-3 md:space-y-8">
               <ContinuousScrollReveal
                 paragraphs={bioParagraphs}
                 className="text-base md:text-2xl leading-relaxed"

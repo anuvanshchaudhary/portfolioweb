@@ -33,7 +33,7 @@ export default function ContinuousScrollReveal({ paragraphs, className = '' }: C
     return (
         <div ref={containerRef} className={className}>
             {paragraphs.map((paragraph, paraIndex) => (
-                <p key={paraIndex} className="mb-0 md:mb-8 font-header leading-relaxed text-foreground flex flex-wrap">
+                <p key={paraIndex} className="mb-3 md:mb-8 font-header leading-relaxed text-foreground flex flex-wrap">
                     {paragraph.split(' ').map((word, wordIndex) => {
                         // Calculate range for this specific word based on its position in the WHOLE text
                         const start = wordGlobalIndex / allWords.length;
