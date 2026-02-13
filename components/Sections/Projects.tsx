@@ -80,18 +80,18 @@ export default function Projects() {
                                         transition={{ duration: 0.4, ease: 'easeInOut' }}
                                         className="overflow-hidden"
                                     >
-                                        <div className="pb-8 pl-0 md:pl-20 space-y-6">
+                                        <div className="pb-4 md:pb-8 pl-0 md:pl-20 space-y-3 md:space-y-6">
                                             {/* Description */}
-                                            <p className="text-body-lg-sm md:text-body-lg text-taupe leading-relaxed">
+                                            <p className="text-sm md:text-body-lg text-taupe leading-relaxed">
                                                 {project.description}
                                             </p>
 
                                             {/* Tech Stack */}
-                                            <div className="flex flex-wrap gap-2">
+                                            <div className="flex flex-wrap gap-1.5 md:gap-2">
                                                 {project.techStack.map((tech) => (
                                                     <span
                                                         key={tech}
-                                                        className="px-4 py-2 bg-surface border border-parchment/10 text-parchment font-mono text-sm"
+                                                        className="px-2.5 py-1 md:px-4 md:py-2 bg-surface border border-parchment/10 text-parchment font-mono text-xs md:text-sm"
                                                     >
                                                         {tech}
                                                     </span>
@@ -99,15 +99,15 @@ export default function Projects() {
                                             </div>
 
                                             {/* Links */}
-                                            <div className="flex gap-4">
+                                            <div className="flex gap-2 md:gap-4">
                                                 {project.github && (
                                                     <a
                                                         href={project.github}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 px-5 py-2.5 md:px-8 md:py-4 bg-terracotta text-parchment hover:bg-sandy transition-colors font-semibold text-sm md:text-lg"
+                                                        className="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-8 md:py-4 bg-terracotta text-parchment hover:bg-sandy transition-colors font-semibold text-xs md:text-lg"
                                                     >
-                                                        <Github className="w-4 h-4 md:w-[18px] md:h-[18px]" />
+                                                        <Github className="w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
                                                         <span>View Code</span>
                                                     </a>
                                                 )}
@@ -117,9 +117,9 @@ export default function Projects() {
                                                         href={project.demo}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 px-5 py-2.5 md:px-8 md:py-4 border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-parchment transition-colors font-semibold text-sm md:text-lg"
+                                                        className="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-8 md:py-4 border-2 border-terracotta text-terracotta hover:bg-terracotta hover:text-parchment transition-colors font-semibold text-xs md:text-lg"
                                                     >
-                                                        <ExternalLink className="w-4 h-4 md:w-[18px] md:h-[18px]" />
+                                                        <ExternalLink className="w-3.5 h-3.5 md:w-[18px] md:h-[18px]" />
                                                         <span>Live Demo</span>
                                                     </a>
                                                 )}
