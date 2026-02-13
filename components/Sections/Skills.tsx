@@ -14,7 +14,7 @@ export default function Skills() {
     ];
 
     return (
-        <section className="py-6 md:py-section px-4 md:px-6 bg-surface">
+        <section className="py-section-sm md:py-section px-4 md:px-6 bg-surface">
             <div className="max-w-5xl mx-auto">
                 {/* Section Label */}
                 <p className="font-mono text-label-sm md:text-label text-terracotta mb-12">

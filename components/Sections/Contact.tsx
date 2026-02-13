@@ -7,7 +7,7 @@ import { CONTACT } from '@/utils/constants';
 
 export default function Contact() {
     return (
-        <footer className="relative py-6 md:py-section px-4 md:px-6 bg-surface">
+        <footer className="relative py-section-sm md:py-section px-4 md:px-6 bg-surface">
             <div className="max-w-6xl mx-auto">
                 {/* Rotating "Stay Curious" Badge */}
                 <div className="flex justify-center mb-6 md:mb-16">

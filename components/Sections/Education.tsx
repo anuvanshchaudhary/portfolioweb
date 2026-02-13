@@ -73,7 +73,7 @@ export default function Education() {
   return (
     <section
       ref={containerRef}
-      className="relative py-6 md:py-0 md:h-screen bg-surface"
+      className="relative md:h-screen bg-surface"
     >
       <div className="absolute top-12 left-6 z-10">
         <p className="font-mono text-[0.65rem] md:text-label text-terracotta">EDUCATION</p>
