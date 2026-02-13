@@ -14,7 +14,7 @@ const bioParagraphs = [
 
 export default function Bio() {
   return (
-    <section className="pt-section-sm md:pt-section pb-12 md:pb-section px-4 md:px-6 relative overflow-hidden">
+    <section className="pt-section-sm md:pt-section pb-6 md:pb-section px-4 md:px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-12 md:gap-24 items-center">
           {/* Text Column */}
