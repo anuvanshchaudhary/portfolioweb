@@ -7,7 +7,7 @@ import ScrambleText from '../Effects/ScrambleText';
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image constrained behind text */}
             <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-screen-2xl h-[65vh] -z-10 opacity-50 select-none">
                 <div className="relative w-full h-full rounded-full overflow-hidden blur-sm scale-100">
@@ -83,7 +83,7 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
             <motion.div
-                className="absolute bottom-12 left-1/2 -translate-x-1/2"
+                className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
             >
