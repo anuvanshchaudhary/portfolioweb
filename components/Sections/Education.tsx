@@ -81,11 +81,11 @@ export default function Education() {
 
       <div
         ref={timelineRef}
-        className="flex items-start pt-32 md:pt-48 px-4 md:px-6 pl-12 gap-6 md:gap-48 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none pb-12 md:pb-0 h-full md:w-fit"
+        className="flex items-start pt-24 md:pt-48 px-4 md:px-6 pl-12 gap-4 md:gap-48 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none pb-12 md:pb-0 h-full md:w-fit"
       // Remove fixed width style to allow natural flow
       >
         {educationData.map((item, index) => (
-          <div key={index} className="flex-shrink-0 w-[65vw] md:w-[550px] snap-center">
+          <div key={index} className="flex-shrink-0 w-[75vw] md:w-[550px] snap-center">
             {/* Added min-h-[300px] to ensure the line is tall enough even for short content */}
             <div className={`relative pl-8 h-full min-h-[180px] md:min-h-[300px] flex flex-col justify-center ${index !== 0 ? 'border-l border-sandy/60' : 'border-l border-transparent'}`}>
               {/* Year */}
