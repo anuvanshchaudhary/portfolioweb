@@ -73,7 +73,7 @@ export default function Education() {
   return (
     <section
       ref={containerRef}
-      className="relative md:h-screen bg-surface"
+      className="relative py-12 md:py-0 md:h-screen bg-surface"
     >
       <div className="absolute top-12 left-6 z-10">
         <p className="font-mono text-[0.65rem] md:text-label text-terracotta">EDUCATION</p>
@@ -85,7 +85,7 @@ export default function Education() {
       // Remove fixed width style to allow natural flow
       >
         {educationData.map((item, index) => (
-          <div key={index} className="flex-shrink-0 w-[80vw] md:w-[550px] snap-center">
+          <div key={index} className="flex-shrink-0 w-[85vw] md:w-[550px] snap-center">
             {/* Added min-h-[300px] to ensure the line is tall enough even for short content */}
             <div className={`relative pl-8 h-full min-h-[180px] md:min-h-[300px] flex flex-col justify-center ${index !== 0 ? 'border-l border-sandy/60' : 'border-l border-transparent'}`}>
               {/* Year */}
