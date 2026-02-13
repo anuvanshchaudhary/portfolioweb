@@ -4,13 +4,15 @@ import React from 'react';
 import Header from '@/components/Sections/Header';
 import Hero from '@/components/Sections/Hero';
 import Bio from '@/components/Sections/Bio';
-// import Experience from '@/components/Sections/Experience';
+
 import Education from '@/components/Sections/Education';
 import Skills from '@/components/Sections/Skills';
 import Projects from '@/components/Sections/Projects';
 import Contact from '@/components/Sections/Contact';
 import ProgressTracker from '@/components/Effects/ProgressTracker';
-import SectionIndicator from '@/components/Effects/SectionIndicator';
+import dynamic from 'next/dynamic';
+
+const SectionIndicator = dynamic(() => import('@/components/Effects/SectionIndicator'), { ssr: false });
 
 export default function Home() {
     return (
@@ -34,10 +36,7 @@ export default function Home() {
                 <Bio />
             </section>
 
-            {/* Experience Timeline (Horizontal Scroll) */}
-            {/* <section id="experience">
-                <Experience />
-            </section> */}
+
 
             {/* Education Section */}
             <section id="education">

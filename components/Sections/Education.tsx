@@ -39,7 +39,9 @@ export default function Education() {
 
     mm.add("(min-width: 768px)", () => {
       // Desktop: Horizontal Scroll via Pinning
-      const scrollWidth = timeline.scrollWidth - container.offsetWidth;
+      // Use Math.max to prevent negative values if screen is wider than content
+      // Add a larger buffer (400px) to ensure we scroll enough to distinctly see the movement
+      const scrollWidth = Math.max(0, timeline.scrollWidth - container.offsetWidth + 400);
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -52,10 +54,15 @@ export default function Education() {
         },
       });
 
-      tl.to(timeline, {
-        x: -scrollWidth,
-        ease: "none",
-      });
+      // Start from the right (showing 2021) and scroll to left (showing 2028)
+      // We animate TO a slight negative value (-50) to give that "extra" push left at the end
+      tl.fromTo(timeline,
+        { x: -scrollWidth },
+        {
+          x: 0,
+          ease: "none",
+        }
+      );
     });
 
     return () => {
@@ -74,12 +81,13 @@ export default function Education() {
 
       <div
         ref={timelineRef}
-        className="flex items-start pt-32 md:pt-48 px-4 md:px-6 gap-6 md:gap-48 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none pb-12 md:pb-0 h-full md:w-fit"
+        className="flex items-start pt-32 md:pt-48 px-4 md:px-6 pl-12 gap-6 md:gap-48 overflow-x-auto md:overflow-hidden snap-x snap-mandatory md:snap-none pb-12 md:pb-0 h-full md:w-fit"
       // Remove fixed width style to allow natural flow
       >
         {educationData.map((item, index) => (
           <div key={index} className="flex-shrink-0 w-[65vw] md:w-[550px] snap-center">
-            <div className="relative">
+            {/* Added min-h-[300px] to ensure the line is tall enough even for short content */}
+            <div className={`relative pl-8 h-full min-h-[300px] flex flex-col justify-center ${index !== 0 ? 'border-l border-sandy/60' : 'border-l border-transparent'}`}>
               {/* Year */}
               <p className="text-hero-sm md:text-hero font-header font-bold text-terracotta/30 mb-6">
                 {item.year}
@@ -94,9 +102,6 @@ export default function Education() {
               <p className="text-body-lg-sm md:text-body-lg text-taupe leading-relaxed">
                 {item.secondary}
               </p>
-
-              {/* Decorative Line */}
-              <div className="absolute -left-6 top-2 bottom-2 w-px bg-terracotta/20" />
             </div>
           </div>
         ))}

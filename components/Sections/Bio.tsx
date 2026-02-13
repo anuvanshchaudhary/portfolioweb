@@ -24,13 +24,13 @@ export default function Bio() {
             </p>
 
             <div className="space-y-8">
-              <ContinuousScrollReveal paragraphs={bioParagraphs} className="text-body-sm md:text-body-lg" />
+              <ContinuousScrollReveal paragraphs={bioParagraphs} className="text-lg md:text-2xl leading-relaxed" />
             </div>
           </div>
 
           {/* Image Column */}
           <div className="order-1 md:order-2 relative group">
-            <div className="relative aspect-[4/5] w-full max-w-[80%] md:max-w-none mx-auto rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-out border border-white/10 shadow-2xl">
+            <div className="relative aspect-[4/4.5] w-full max-w-[80%] md:max-w-none mx-auto rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-out border border-white/10 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-60" />
               <Image
                 src="/images/profile.png"
