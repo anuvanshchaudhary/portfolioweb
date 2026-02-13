@@ -41,7 +41,7 @@ const config: Config = {
             },
             spacing: {
                 'section': 'clamp(100px, 10vw, 160px)',
-                'section-sm': '40px',
+                'section-sm': '24px',
                 'paragraph': 'clamp(36px, 6vw, 75px)',
             },
             borderRadius: {
