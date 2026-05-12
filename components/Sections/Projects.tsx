@@ -14,7 +14,7 @@ export default function Projects() {
     };
 
     return (
-        <section className="py-section-sm md:py-section px-4 md:px-6">
+        <section className="py-section-sm md:py-section px-4 md:px-6 bg-void">
             <div className="max-w-7xl mx-auto">
                 {/* Section Label */}
                 <p className="font-mono text-label-sm md:text-label text-terracotta mb-12">

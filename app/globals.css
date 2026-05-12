@@ -54,7 +54,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  min-height: 100vh;
+}
 
+/* Ensure no green background on mobile */
+@media (max-width: 768px) {
+  body {
+    background: var(--color-void) !important;
+  }
+
+  html {
+    background: var(--color-void) !important;
+  }
 }
 
 /* Noise Overlay - Analog Film Grain Texture */
