@@ -33,10 +33,10 @@ export default function Bio() {
 
           {/* Image Column */}
           <div className="order-1 md:order-2 relative group">
-            <div className="relative aspect-[4/4.5] w-full max-w-[80%] md:max-w-none mx-auto rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-out border border-white/10 shadow-2xl">
+            <div className="relative aspect-[3.15/4] w-full max-w-[80%] md:max-w-none mx-auto rounded-2xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-out border border-white/10 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-60" />
               <Image
-                src="/images/profile.png"
+                src="/images/profile.jpeg"
                 alt="Profile"
                 fill
                 className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700"
