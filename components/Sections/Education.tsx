@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const educationData = [
   {
     year: "2028",
-    primary: "CGPA: 8.75 • Computer Science",
+    primary: "CGPA: 8.82 • Computer Science & IoT",
     secondary: "Bachelor of Technology • Vellore Institute of Technology",
   },
   {

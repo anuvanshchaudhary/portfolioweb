@@ -6,6 +6,7 @@ import Bio from "@/components/Sections/Bio";
 import { Analytics } from "@vercel/analytics/next";
 
 import Education from "@/components/Sections/Education";
+import Experience from "@/components/Sections/Experience";
 import Skills from "@/components/Sections/Skills";
 import Projects from "@/components/Sections/Projects";
 import Contact from "@/components/Sections/Contact";
@@ -45,6 +46,11 @@ export default function Home() {
       {/* Education Section */}
       <section id="education">
         <Education />
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience">
+        <Experience />
       </section>
 
       {/* Skills Section */}

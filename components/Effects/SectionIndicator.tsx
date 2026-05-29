@@ -7,8 +7,8 @@ import { ArrowRight } from "lucide-react";
 const sections = [
   { id: "hero", label: "INTRO" },
   { id: "about", label: "ABOUT" },
-
   { id: "education", label: "EDUCATION" },
+  { id: "experience", label: "EXPERIENCE" },
   { id: "skills", label: "SKILLS" },
   { id: "projects", label: "PROJECTS" },
   { id: "contact", label: "CONTACT" },

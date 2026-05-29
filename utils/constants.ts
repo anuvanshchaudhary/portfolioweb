@@ -77,20 +77,20 @@ export const PROJECTS = [
     {
         id: 'easy-pdf',
         title: 'Easy PDF',
-        description: 'AI-powered PDF summarization tool using GPT-4 and Langchain. Handles 16MB files, secure authentication, and real-time processing. Built for students drowning in research papers.',
+        description: 'AI-powered PDF summarization web app using GPT-4 and LangChain. Built a full-stack system featuring intelligent text extraction, secure Clerk authentication, a serverless PostgreSQL database, drag-and-drop file uploads up to 16MB, and real-time reading progress tracking.',
         icon: '📄',
         accentColor: COLORS.gptBlue,
-        techStack: ['Next.js', 'React', 'TypeScript', 'GPT-4', 'Langchain', 'Clerk'],
+        techStack: ['Next.js', 'React', 'TypeScript', 'GPT-4', 'LangChain', 'PostgreSQL', 'Clerk'],
         github: 'https://github.com/anuvanshchaudhary/EasyPDF',
         demo: 'https://easy-pdf-wheat.vercel.app/',
     },
     {
         id: 'morse-assist',
         title: 'Morse Assist',
-        description: 'Patent-pending assistive communication system for individuals with severe motor impairments. Converts eye twitches into Morse code with 90%+ accuracy using ESP32 and IR sensors.',
+        description: 'Patent-pending eye-twitch based assistive communication device for individuals with severe motor impairments. Developed an eye-twitch input mechanism encoding eye movements as Morse signals to translate into text with 90%+ accuracy, engineering real-time signal processing on ESP32 to reliably distinguish intentional blinks.',
         icon: '🔴',
         accentColor: COLORS.patentRed,
-        techStack: ['ESP32', 'C++', 'IR Sensors', 'Arduino'],
+        techStack: ['ESP32', 'IR Sensors', 'Arduino', 'Embedded C'],
         patentPending: true,
         github: null, // Patent pending, no public repo
     },
@@ -107,10 +107,10 @@ export const PROJECTS = [
     {
         id: 'stylecraft',
         title: 'StyleCraft',
-        description: 'Interactive CSS lesson platform teaching border-radius, transforms, and animations through live code editing. Beginner-friendly, instant feedback.',
+        description: 'Interactive CSS learning and prototyping platform featuring 6 interactive labs (Flexbox, Typography, Box Model, Backgrounds, Transforms, Borders) with real-time visual feedback. Architected Zustand state stores for reactive, isolated control over 40+ CSS properties simultaneously, with Clerk authentication and Radix UI.',
         icon: '🎨',
         accentColor: COLORS.gptBlue,
-        techStack: ['React', 'CSS Variables', 'JavaScript'],
+        techStack: ['React 19', 'TypeScript', 'Vite', 'Zustand', 'Radix UI', 'Tailwind CSS v4', 'Clerk'],
         github: 'https://github.com/anuvanshchaudhary/Stylecraft',
         demo: 'https://stylecraft-web.vercel.app/',
     },
@@ -118,10 +118,13 @@ export const PROJECTS = [
 
 // Skills Data
 export const SKILLS = {
-    LANGUAGES: ['Python', 'Java', 'C/C++', 'JavaScript', 'TypeScript'],
-    FRONTEND: ['HTML', 'CSS', 'React', 'Next.js', 'Tailwind CSS'],
-    BACKEND: ['SQL', 'MySQL', 'Node.js', 'Express'],
-    TOOLS: ['Git', 'GitHub', 'Vercel'],
+    LANGUAGES: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C / C++'],
+    FRONTEND: ['React 19', 'Next.js', 'Vite', 'HTML', 'CSS', 'Tailwind CSS v4'],
+    BACKEND_DB: ['Node.js', 'SQL', 'MySQL', 'PostgreSQL', 'REST APIs'],
+    STATE_MGMT: ['Zustand'],
+    AI_ML: ['LangChain', 'OpenAI GPT-4 API', 'Google Gemini API', 'Prompt Engineering'],
+    EMBEDDED_IOT: ['ESP32', 'Arduino', 'IR Sensors', 'Embedded C'],
+    TOOLS_PLATFORMS: ['Git', 'GitHub', 'Vercel', 'Clerk'],
 } as const;
 
 // Contact Information
@@ -135,12 +138,26 @@ export const CONTACT = {
 // Education Data
 export const EDUCATION = {
     university: 'VIT Vellore',
-    degree: 'B.Tech Computer Science',
+    degree: 'B.Tech Computer Science and Internet of Things',
     expectedGraduation: '2028',
-    cgpa: '8.7',
+    cgpa: '8.82',
     highSchool: {
         name: 'DAV Public School, Kotdwara',
         year: '2023',
         percentage: '92%',
     },
 } as const;
+
+// Experience Data
+export const EXPERIENCE = [
+    {
+        company: 'Hindware Ltd.',
+        location: 'Gurgaon, Haryana',
+        role: 'Intern',
+        period: 'May – June 2025',
+        bullets: [
+            'Gained hands-on exposure to enterprise software workflows and internal tooling in a corporate environment.',
+            'Collaborated with the development team on web-based projects and modern frameworks.',
+        ],
+    },
+] as const;

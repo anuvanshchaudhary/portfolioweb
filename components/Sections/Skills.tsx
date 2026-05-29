@@ -9,8 +9,11 @@ export default function Skills() {
     const skillCategories = [
         { label: 'Languages', skills: SKILLS.LANGUAGES },
         { label: 'Frontend', skills: SKILLS.FRONTEND },
-        { label: 'Backend', skills: SKILLS.BACKEND },
-        { label: 'Tools', skills: SKILLS.TOOLS },
+        { label: 'Backend & Databases', skills: SKILLS.BACKEND_DB },
+        { label: 'State Management', skills: SKILLS.STATE_MGMT },
+        { label: 'AI & ML', skills: SKILLS.AI_ML },
+        { label: 'Embedded & IoT', skills: SKILLS.EMBEDDED_IOT },
+        { label: 'Tools & Platforms', skills: SKILLS.TOOLS_PLATFORMS },
     ];
 
     return (
