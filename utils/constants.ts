@@ -17,6 +17,7 @@ export const COLORS = {
     matrixGreen: '#00FF41',
     successGreen: '#34C759',
     warningOrange: '#FF9500',
+    neonPink: '#FF007F',
 } as const;
 
 // Typography Scale
@@ -75,6 +76,16 @@ export const WINDOW_TYPES = {
 // Project Data
 export const PROJECTS = [
     {
+        id: 'morse-assist',
+        title: 'Morse Assist',
+        description: 'Patented eye-twitch based assistive communication device for individuals with severe motor impairments. Developed an eye-twitch input mechanism encoding eye movements as Morse signals to translate into text with 90%+ accuracy, engineering real-time signal processing on ESP32 to reliably distinguish intentional blinks.',
+        icon: '🔴',
+        accentColor: COLORS.patentRed,
+        techStack: ['ESP32', 'IR Sensors', 'Arduino', 'Embedded C'],
+        patented: true,
+        github: null, // Patented, no public repo
+    },
+    {
         id: 'easy-pdf',
         title: 'Easy PDF',
         description: 'AI-powered PDF summarization web app using GPT-4 and LangChain. Built a full-stack system featuring intelligent text extraction, secure Clerk authentication, a serverless PostgreSQL database, drag-and-drop file uploads up to 16MB, and real-time reading progress tracking.',
@@ -85,24 +96,14 @@ export const PROJECTS = [
         demo: 'https://easy-pdf-wheat.vercel.app/',
     },
     {
-        id: 'morse-assist',
-        title: 'Morse Assist',
-        description: 'Patent-pending eye-twitch based assistive communication device for individuals with severe motor impairments. Developed an eye-twitch input mechanism encoding eye movements as Morse signals to translate into text with 90%+ accuracy, engineering real-time signal processing on ESP32 to reliably distinguish intentional blinks.',
-        icon: '🔴',
-        accentColor: COLORS.patentRed,
-        techStack: ['ESP32', 'IR Sensors', 'Arduino', 'Embedded C'],
-        patentPending: true,
-        github: null, // Patent pending, no public repo
-    },
-    {
-        id: 'github-finder',
-        title: 'GitHub Finder',
-        description: 'Real-time GitHub profile explorer with error handling and responsive design. Fetches user data via GitHub API. Built to learn API integration fundamentals.',
-        icon: '🔍',
-        accentColor: COLORS.gptBlue,
-        techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub API'],
-        github: 'https://github.com/anuvanshchaudhary/Github-finder',
-        demo: 'https://github-finder-ashen-theta.vercel.app/',
+        id: 'air-canvas',
+        title: 'Air Canvas',
+        description: 'Premium, gesture-controlled drawing application powered by computer vision. Features a side-by-side 50-50 split screen layout, glowing neon brush and starry sparkle effects, dynamic pinch-to-resize, and automated shape/line snapping, using MediaPipe hand landmark tracking.',
+        icon: '🎨',
+        accentColor: COLORS.neonPink,
+        techStack: ['MediaPipe SDK', 'HTML5 Canvas', 'Vanilla CSS', 'JavaScript', 'Python', 'OpenCV', 'NumPy'],
+        github: 'https://github.com/anuvanshchaudhary/air-draw',
+        demo: 'https://anuvanshchaudhary.github.io/air-draw/',
     },
     {
         id: 'stylecraft',
@@ -114,14 +115,24 @@ export const PROJECTS = [
         github: 'https://github.com/anuvanshchaudhary/Stylecraft',
         demo: 'https://stylecraft-web.vercel.app/',
     },
+    {
+        id: 'github-finder',
+        title: 'GitHub Finder',
+        description: 'Real-time GitHub profile explorer with error handling and responsive design. Fetches user data via GitHub API. Built to learn API integration fundamentals.',
+        icon: '🔍',
+        accentColor: COLORS.gptBlue,
+        techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub API'],
+        github: 'https://github.com/anuvanshchaudhary/Github-finder',
+        demo: 'https://github-finder-ashen-theta.vercel.app/',
+    },
 ] as const;
 
 // Skills Data
 export const SKILLS = {
     LANGUAGES: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C / C++'],
-    FRONTEND: ['React 19', 'Next.js', 'Vite', 'HTML', 'CSS', 'Tailwind CSS v4', 'Zustand'],
+    FRONTEND: ['React 19', 'Next.js', 'Vite', 'HTML', 'CSS', 'Tailwind CSS v4'],
     BACKEND_DB: ['Node.js', 'SQL', 'MySQL', 'PostgreSQL', 'REST APIs'],
-    AI_ML: ['LangChain', 'OpenAI GPT-4 API', 'Google Gemini API', 'Prompt Engineering'],
+    AI_ML: ['LangChain', 'OpenAI GPT-4 API', 'Google Gemini API'],
     EMBEDDED_IOT: ['ESP32', 'Arduino', 'IR Sensors', 'Embedded C'],
     TOOLS_PLATFORMS: ['Git', 'GitHub', 'Vercel', 'Clerk'],
 } as const;

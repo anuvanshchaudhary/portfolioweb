@@ -53,9 +53,9 @@ export default function Projects() {
                                                 text={project.title}
                                             />
                                         </h3>
-                                        {'patentPending' in project && project.patentPending && (
+                                        {'patented' in project && project.patented && (
                                             <span className="inline-block mt-2 px-3 py-1 bg-terracotta/20 border border-terracotta text-terracotta font-mono text-label-sm md:text-label">
-                                                PATENT PENDING
+                                                PATENTED
                                             </span>
                                         )}
                                     </div>

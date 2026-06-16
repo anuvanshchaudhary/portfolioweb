@@ -7,6 +7,7 @@ import { WindowContext } from '../Windows/Window';
 import { gravityFallVariants } from '@/utils/animations';
 import ScanningLaser from '../Animations/ScanningLaser';
 import MorseCodeReveal from '../Animations/MorseCodeReveal';
+import NeonDrawingTracer from '../Animations/NeonDrawingTracer';
 
 interface Project {
     id: string;
@@ -17,7 +18,7 @@ interface Project {
     techStack: readonly string[];
     github?: string | null;
     demo?: string;
-    patentPending?: boolean;
+    patented?: boolean;
 }
 
 interface ProjectCardProps {
@@ -34,6 +35,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="border-4 border-strict-black shadow-brutalist hover:shadow-brutalist-hover p-6 bg-window-white transition-shadow relative overflow-hidden"
         >
             {project.id === 'easy-pdf' && <ScanningLaser />}
+            {project.id === 'air-canvas' && <NeonDrawingTracer />}
 
             {/* Header */}
             <div className="flex items-start gap-4 mb-4">
@@ -47,9 +49,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                         <h3 className="text-h3 font-bold">{project.title}</h3>
-                        {project.patentPending && (
+                        {project.patented && (
                             <span className="px-2 py-1 bg-patent-red text-window-white text-caption font-bold uppercase border border-strict-black">
-                                Patent Pending
+                                Patented
                             </span>
                         )}
                     </div>
