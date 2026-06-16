@@ -10,7 +10,6 @@ export default function Skills() {
         { label: 'Languages', skills: SKILLS.LANGUAGES },
         { label: 'Frontend', skills: SKILLS.FRONTEND },
         { label: 'Backend & Databases', skills: SKILLS.BACKEND_DB },
-        { label: 'State Management', skills: SKILLS.STATE_MGMT },
         { label: 'AI & ML', skills: SKILLS.AI_ML },
         { label: 'Embedded & IoT', skills: SKILLS.EMBEDDED_IOT },
         { label: 'Tools & Platforms', skills: SKILLS.TOOLS_PLATFORMS },

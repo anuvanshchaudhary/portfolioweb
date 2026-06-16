@@ -119,9 +119,8 @@ export const PROJECTS = [
 // Skills Data
 export const SKILLS = {
     LANGUAGES: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C / C++'],
-    FRONTEND: ['React 19', 'Next.js', 'Vite', 'HTML', 'CSS', 'Tailwind CSS v4'],
+    FRONTEND: ['React 19', 'Next.js', 'Vite', 'HTML', 'CSS', 'Tailwind CSS v4', 'Zustand'],
     BACKEND_DB: ['Node.js', 'SQL', 'MySQL', 'PostgreSQL', 'REST APIs'],
-    STATE_MGMT: ['Zustand'],
     AI_ML: ['LangChain', 'OpenAI GPT-4 API', 'Google Gemini API', 'Prompt Engineering'],
     EMBEDDED_IOT: ['ESP32', 'Arduino', 'IR Sensors', 'Embedded C'],
     TOOLS_PLATFORMS: ['Git', 'GitHub', 'Vercel', 'Clerk'],
@@ -154,7 +153,7 @@ export const EXPERIENCE = [
         company: 'Hindware Ltd.',
         location: 'Gurgaon, Haryana',
         role: 'Intern',
-        period: 'May – June 2025',
+        period: 'May – June 2026',
         bullets: [
             'Gained hands-on exposure to enterprise software workflows and internal tooling in a corporate environment.',
             'Collaborated with the development team on web-based projects and modern frameworks.',
